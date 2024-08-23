@@ -1,5 +1,7 @@
 #personal finance manager
 print("Welcome to your Personal finance manager")
+def formula(amount_left):
+    (20*amount_left/100) 
 income = int(input("enter your monthly income in INR = "))
 utilities = int(input("enter amount spent on utilities = "))
 groceries = int(input("enter amount spent on groceries = "))
@@ -11,6 +13,7 @@ if (ans == 'yes'):
     expense = rent + utilities + groceries 
 
 elif (ans == 'no' ):
+    rent = 0
     expense = utilities + groceries 
 
 print("your expense is = ", expense)
@@ -22,17 +25,34 @@ if (ans == 'yes'):
     print(list)
     ans = (input("how much do you want to save? = "))
     if (ans == '5%'):
-        print("your savings = ", 5*amount_left/100 )
-    elif (ans == '10%'):
-        print("your savings = ", 10*amount_left/100)
+        savings = 5*amount_left/100
+        print("your savings = ", savings)
+    elif(ans == '10%'):
+        savings = 10*amount_left/100
+        print("your savings = ", savings)
     elif(ans == '20%'):
-        print("your savings = ", 20*amount_left/100)
+        savings = 20*amount_left/100 
+        print("your savings = ", savings)
     elif(ans == '30%'):
-        print("your savings = ", 30*amount_left/100)
+        savings = 30*amount_left/100
+        print("your savings = ", savings)
     elif(ans == '40%'):
-        print("your savings = ", 40*amount_left/100)
+        savings = 40*amount_left/100
+        print("your savings = ", savings)
     elif(ans == "50%"):
-        print("your savings = ", 50*amount_left/100)
-
-if(ans == 'no'):
-    print("have a nice day")
+        savings = 50*amount_left/100
+        print("your savings = ", savings)
+    print("your summary report = ")
+    print("amount spent on groceries = ", groceries)
+    print("amount spent on utilities = ", utilities)
+    print("amount spent on rent = ", rent)
+    print("amount saved = ", savings)
+    print("amount left after savings = ", amount_left-savings)
+else: 
+    savings = 0
+    print("your summary report = ")
+    print("amount spent on groceries = ", groceries)
+    print("amount spent on utilities = ", utilities)
+    print("amount spent on rent = ", rent)
+    print("amount saved = ", savings)
+    print("amount left after savings = ", amount_left-savings)
